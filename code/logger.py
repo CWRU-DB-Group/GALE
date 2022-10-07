@@ -3,10 +3,10 @@ from datetime import datetime
 
 
 class Logger(object):
-    def __init__(self):
+    def __init__(self, dataset_name):
         self.terminal = sys.stdout
         self.run_id = datetime.now().strftime("%Y%m%d-%H%M%S")
-        self.log = open(self.run_id+"train_gedetModel_logfile.log", "a")
+        self.log = open(self.run_id+dataset_name+"train_gedetModel_logfile.log", "a")
 
     def write(self, message):
         self.terminal.write(message)
