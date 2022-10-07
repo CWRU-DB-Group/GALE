@@ -100,7 +100,7 @@ def load_clean_data(path,prefix, pca_use, normalize=True):
     y_test = np.array([0, 0])
     y_train_active = np.array([0,0])
     # use only 10% nodes as training
-    semi_threshold = int(round(nodes_num * 0.6 * 0.1* 0.01))
+    semi_threshold = int(round(nodes_num * 0.6 * 0.1))
     idx_train_active =[]
     idx_train = range(semi_threshold)
     idx_val = []

@@ -3,6 +3,7 @@ import pickle as pkl
 import networkx as nx
 import scipy.sparse as sp
 from scipy.sparse.linalg.eigen.arpack import eigsh
+from scipy.sparse.linalg import inv
 import sys
 import json
 import os
@@ -1074,6 +1075,12 @@ def optimized_dist(val, latest_added, sample_set, data_embeds,train_active_idx,e
     ##update dist_pair_array
     dist_pair_array[row_index, saved_sample_column_indx+1] = euclid_dist
     return euclid_dist, dist_pair_array
+
+
+def cmpt_page_rank(pr_prob, adj):
+    adj_normalized = normalize_adj(adj + sp.eye(adj.shape[0])).tocsr()
+    page_rank_matrix = pr_prob * (inv(sp.eye(adj.shape[0]) - (1 - pr_prob) * adj_normalized))
+    return page_rank_matrix
 
 
 

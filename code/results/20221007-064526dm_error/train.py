@@ -52,7 +52,7 @@ flags.DEFINE_string('datapath',"dataset/dm/","Dataset path")
 flags.DEFINE_integer('active_epochs', 17, 'Number of active epochs to continue training discriminator.')
 flags.DEFINE_integer('sample_size',70, 'sample size per epoch in active learning')
 flags.DEFINE_integer('seed', 1, 'random seed')
-flags.DEFINE_string('sample_method', 'approximation', 'sampling method in active learing part')
+flags.DEFINE_string('sample_method', 'entropy', 'sampling method in active learing part')
 flags.DEFINE_integer('query_epoch', 2, 'use to select a query strategy, default set as 5')
 flags.DEFINE_integer('query_sample_size', 50, 'use to select a query strategy, default set as 10')
 flags.DEFINE_integer('cluster_size',25, 'clustering size')
@@ -742,5 +742,8 @@ with open(FLAGS.datasetname+'gedet++_test.txt', 'a') as f:
 stop = timeit.default_timer()
 
 print('The total time:', stop-start)
+for file in os.listdir('.'):
+    if file.startswith(run_id+FLAGS.datasetname):
+        log_file = file
 
-copyfile('logfile.log',os.path.join(run_dir,+run_id+'logfile.log'))
+copyfile(log_file, os.path.join(run_dir,run_id+'logfile.log'))

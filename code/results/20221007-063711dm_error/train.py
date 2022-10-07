@@ -24,13 +24,14 @@ from shutil import copyfile
 import os
 from logger import Logger
 
-sys.stdout = Logger()
 
+
+'''
 run_id = datetime.now().strftime("%Y%m%d-%H%M%S")
 run_dir = os.path.join("./results/", run_id)
 os.mkdir(run_dir)
 copyfile(__file__,os.path.join(run_dir,os.path.basename(__file__)))
-
+'''
 
 
 
@@ -51,7 +52,7 @@ flags.DEFINE_string('datapath',"dataset/dm/","Dataset path")
 flags.DEFINE_integer('active_epochs', 17, 'Number of active epochs to continue training discriminator.')
 flags.DEFINE_integer('sample_size',70, 'sample size per epoch in active learning')
 flags.DEFINE_integer('seed', 1, 'random seed')
-flags.DEFINE_string('sample_method', 'approximation', 'sampling method in active learing part')
+flags.DEFINE_string('sample_method', 'random', 'sampling method in active learing part')
 flags.DEFINE_integer('query_epoch', 2, 'use to select a query strategy, default set as 5')
 flags.DEFINE_integer('query_sample_size', 50, 'use to select a query strategy, default set as 10')
 flags.DEFINE_integer('cluster_size',25, 'clustering size')
@@ -62,6 +63,13 @@ flags.DEFINE_boolean('pca_flag',False,'whether to use PCA as preprocessing')
 seed=FLAGS.seed
 np.random.seed(seed)
 tf.set_random_seed(seed)
+
+sys.stdout = Logger(FLAGS.datasetname)
+run_id = datetime.now().strftime("%Y%m%d-%H%M%S")
+run_dir = os.path.join("./results/", run_id +FLAGS.datasetname)
+os.mkdir(run_dir)
+print(os.path.basename(__file__))
+copyfile(__file__,os.path.join(run_dir,os.path.basename(__file__)))
 
 def calc_scores_error_detection(y_true, y_pred):
     y_true = np.argmax(y_true, axis=1)
@@ -438,10 +446,10 @@ f1_score_val=[]
 sess = tf.Session()
 #enable to directly load pre-trained model
 best_epoch = 39
-#new_saver = tf.train.import_meta_graph('./'+ checkpoint_path+'saved_model/'+'my_test_model-'+str(best_epoch)+'.meta')
-new_saver = tf.train.import_meta_graph('./'+ checkpoint_path+'my_test_model-'+str(best_epoch)+'.meta')
-#new_saver.restore(sess, './' + checkpoint_path+'saved_model/' + 'my_test_model-'+str(best_epoch))
-new_saver.restore(sess, './' + checkpoint_path+ 'my_test_model-'+str(best_epoch))
+new_saver = tf.train.import_meta_graph('./'+ checkpoint_path+'saved_model/'+'my_test_model-'+str(best_epoch)+'.meta')
+#new_saver = tf.train.import_meta_graph('./'+ checkpoint_path+'my_test_model-'+str(best_epoch)+'.meta')
+new_saver.restore(sess, './' + checkpoint_path+'saved_model/' + 'my_test_model-'+str(best_epoch))
+#new_saver.restore(sess, './' + checkpoint_path+ 'my_test_model-'+str(best_epoch))
 
 # Now, let's access and create placeholders variables
 graph = tf.get_default_graph()
@@ -734,5 +742,8 @@ with open(FLAGS.datasetname+'gedet++_test.txt', 'a') as f:
 stop = timeit.default_timer()
 
 print('The total time:', stop-start)
+for file in os.listdir('.'):
+    if file.startswith(run_id+FLAGS.datasetname):
+        log_file = file
 
-copyfile('logfile.log',os.path.join(run_dir,run_id+'logfile.log'))
+copyfile(log_file, os.path.join(run_dir,run_id+'logfile.log'))
