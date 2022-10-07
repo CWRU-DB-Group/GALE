@@ -518,10 +518,7 @@ elif 'user10' in FLAGS.datasetname:
     sess.run(update)
 
 elif 'species' in FLAGS.datasetname:
-    if FLAGS.sample_method=='entropy':
-        update = model.learning_rate.assign(sess.run(model.learning_rate)*pow((0.6), 3))
-    else:
-        update = model.learning_rate.assign(sess.run(model.learning_rate) * pow((0.9), 4))
+    update = model.learning_rate.assign(sess.run(model.learning_rate)*pow((0.9), 4))
     sess.run(update)
 
 

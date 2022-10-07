@@ -1,0 +1,56 @@
+The testing accuracy is: 
+0.9310474755086662
+The testing precision is: 
+0.9039408866995073
+The testing recall is: 
+0.5288184438040345
+The testing f1_score is: 
+0.6672727272727272
+The testing accuracy is: 
+0.9310474755086662
+The testing precision is: 
+0.9039408866995073
+The testing recall is: 
+0.5288184438040345
+The testing f1_score is: 
+0.6672727272727272
+The testing accuracy is: 
+0.9310474755086662
+The testing precision is: 
+0.9039408866995073
+The testing recall is: 
+0.5288184438040345
+The testing f1_score is: 
+0.6672727272727272
+The testing accuracy is: 
+0.9310474755086662
+The testing precision is: 
+0.9039408866995073
+The testing recall is: 
+0.5288184438040345
+The testing f1_score is: 
+0.6672727272727272
+The testing accuracy is: 
+0.9310474755086662
+The testing precision is: 
+0.9039408866995073
+The testing recall is: 
+0.5288184438040345
+The testing f1_score is: 
+0.6672727272727272
+The testing accuracy is: 
+0.9310474755086662
+The testing precision is: 
+0.9039408866995073
+The testing recall is: 
+0.5288184438040345
+The testing f1_score is: 
+0.6672727272727272
+The testing accuracy is: 
+0.9310474755086662
+The testing precision is: 
+0.9039408866995073
+The testing recall is: 
+0.5288184438040345
+The testing f1_score is: 
+0.6672727272727272

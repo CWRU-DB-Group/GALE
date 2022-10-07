@@ -52,7 +52,7 @@ flags.DEFINE_string('datapath',"dataset/species/","Dataset path")
 flags.DEFINE_integer('active_epochs', 8, 'Number of active epochs to continue training discriminator.')
 flags.DEFINE_integer('sample_size',100, 'sample size per epoch in active learning')
 flags.DEFINE_integer('seed', 1, 'random seed')
-flags.DEFINE_string('sample_method', 'entropy', 'sampling method in active learing part')
+flags.DEFINE_string('sample_method', 'approximation', 'sampling method in active learing part')
 flags.DEFINE_integer('query_epoch', 2, 'use to select a query strategy, default set as 5')
 flags.DEFINE_integer('query_sample_size', 50, 'use to select a query strategy, default set as 10')
 flags.DEFINE_integer('cluster_size',150, 'clustering size')
@@ -518,10 +518,7 @@ elif 'user10' in FLAGS.datasetname:
     sess.run(update)
 
 elif 'species' in FLAGS.datasetname:
-    if FLAGS.sample_method=='entropy':
-        update = model.learning_rate.assign(sess.run(model.learning_rate)*pow((0.6), 3))
-    else:
-        update = model.learning_rate.assign(sess.run(model.learning_rate) * pow((0.9), 4))
+    update = model.learning_rate.assign(sess.run(model.learning_rate)*pow((0.9), 4))
     sess.run(update)
 
 
