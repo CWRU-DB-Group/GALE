@@ -1079,8 +1079,233 @@ def optimized_dist(val, latest_added, sample_set, data_embeds,train_active_idx,e
 
 def cmpt_page_rank(pr_prob, adj):
     adj_normalized = normalize_adj(adj + sp.eye(adj.shape[0])).tocsr()
-    page_rank_matrix = pr_prob * (inv(sp.eye(adj.shape[0]) - (1 - pr_prob) * adj_normalized))
+    page_rank_matrix = pr_prob * (inv((sp.eye(adj.shape[0]) - (1 - pr_prob) * adj_normalized).tocsc()))
     return page_rank_matrix
+
+
+def topological_typi(dense_page_rank, soft_label_matrix, train_active_mask,dist_active_data,train_active_idx,node_id, node_id_index):
+
+    count_error_label = 0
+    count_correct_label =0
+    P_error=[]
+    P_correct =[]
+    for id in range(len(train_active_idx)):
+        n_id = train_active_idx[id]
+        #print(np.argmax(soft_label_matrix[n_id]))
+        #print(np.argmax(dist_active_data[id]))
+        if np.argmax(soft_label_matrix[n_id]) != np.argmax(dist_active_data[id]) and np.argmax(dist_active_data[id])==0:
+            count_correct_label +=1
+            P_correct.append(dense_page_rank[node_id][id])
+        elif np.argmax(soft_label_matrix[n_id]) != np.argmax(dist_active_data[id]) and np.argmax(dist_active_data[id])==1:
+            count_error_label += 1
+            P_error.append(dense_page_rank[node_id][id])
+        else:
+            continue
+    #weighted sum for Totoro metric computation
+    if len(P_correct)> 0 and len(P_error)> 0:
+        Totoro = 1.0/count_correct_label *np.sum(P_correct) +1.0/count_error_label *np.sum(P_error)
+    elif len(P_correct)> 0 and len(P_error)<=0:
+        Totoro = 1.0 / count_correct_label * np.sum(P_correct)
+    elif len(P_error)> 0 and len(P_correct)<= 0:
+        Totoro =1.0/count_error_label *np.sum(P_error)
+    else:
+        Totoro =0.0
+    topological_typicality = 1 -Totoro
+    return topological_typicality
+
+
+
+
+
+def soft_approximation_sampler(cluster_size, sample_size, train_active_mask, data_embeds, ground_truth, lam, dense_page_rank, soft_label_matrix, dist_active_data):
+
+    print("start implementing approximation sampler")
+    start = timeit.default_timer()
+    print("calculating k-means first")
+    km = KMeans(
+        n_clusters=cluster_size, init='random',
+        n_init=10, max_iter=300,
+        tol=1e-04, random_state=0
+    )
+    y_km = km.fit_predict(data_embeds)
+    centroids = km.cluster_centers_
+    x_dist = km.transform(data_embeds)
+
+
+    #print("initialize the empty set S")
+    #sample_set = set()
+    sample_set = []
+    typicality_dict = dict()
+    train_active_idx = np.where(train_active_mask == True)[0]
+    initial_true =  train_active_idx.shape[0]
+    #print(data_embeds.shape[0])
+
+    ##get a cluster_flage
+    cluster_flag_dict = dict()
+
+
+
+    for id, val in enumerate(set(train_active_idx.flatten())):
+        ###get the corresponding euclidean dist to the centroid
+        pred_cluster_val = y_km[id]
+        cluster_flag_dict[pred_cluster_val] = False
+        dist_val = x_dist[id][pred_cluster_val]
+        #print("instance {0:} is assigned to {1:} cluster".format(val, pred_cluster_val))
+        #print("euclidean distance is {:5.4f}".format(dist_val))
+        train_id =val
+        train_id_index = id
+
+        if dist_val !=0.0:
+            typicality_dict[val] = 1.0/dist_val * topological_typi(dense_page_rank, soft_label_matrix, train_active_mask,dist_active_data,train_active_idx, train_id, train_id_index)
+        else:
+            typicality_dict[val] = 1.0/(dist_val+1e-4) * topological_typi(dense_page_rank, soft_label_matrix, train_active_mask,dist_active_data,train_active_idx, train_id, train_id_index)
+
+    print("computing typicality finished")
+    ##pre-compute the embedding distance between any two node-pair
+    euclid_dict = dict()
+
+    '''
+    pre_computing_begin = timeit.default_timer()
+    for i in range(len(train_active_idx)):
+        for j in range(len(train_active_idx)):
+            index_node_source = i
+            index_node_dest = j
+            #print(index_node_source)
+            #print(index_node_dest)
+            source_embeds = data_embeds[index_node_source]
+            dest_embeds = data_embeds[index_node_dest]
+            source_embeds = np.reshape(source_embeds, (1,-1))
+            dest_embeds = np.reshape(dest_embeds, (1,-1))
+            euclid_dict[(index_node_source, index_node_dest)] =euclidean_distances(source_embeds, dest_embeds)
+    pre_computing_end = timeit.default_timer()
+    print("Precomputing Time :", pre_computing_end -pre_computing_begin)
+    '''
+
+
+
+    #dynamic_tain_active_idx = train_active_idx.copy()
+    #dynamic_data_embeds = data_embeds.copy()
+
+
+    non_negative_set_dict = dict()
+    non_negative_set_dict[0]= 0.0
+    ##initialize a n by len(sample_size) matrix to save dist computation
+    dist_pair_array = np.zeros(shape=(len(train_active_idx), sample_size+1))
+
+    while len(sample_set)< sample_size:
+        #get all the node index from train_active_mask\sample_set
+        #train_active_idx = np.where(train_active_mask==True)[0]
+        remaining_idx_set = set(train_active_idx.flatten()).difference(set(sample_set))
+        # prepare a 2-dimensional array to help select maximizing ojective
+        objective_selected_dist = np.zeros(shape=(len(remaining_idx_set), 7))
+        #find u \in train_active_mask\S maximizing phi'_u(S)
+        start_epoch = timeit.default_timer()
+        if len(sample_set )> 0:
+            latest_added = sample_set[-1]
+        for id , val in enumerate(remaining_idx_set):
+            start_search = timeit.default_timer()
+            #temp_set = sample_set.copy()
+            temp_set = list(sample_set)
+            #print("#######################")
+            #print(id, val)
+            ##y_km needs to be dynamically trimed
+            pred_cluster_val = y_km[id]
+
+            if cluster_flag_dict[pred_cluster_val]==False:
+                #temp_set.add(val)
+                temp_set.append(val)
+                unprocess_first_term = non_negative_set(val, temp_set, typicality_dict, non_negative_set_dict)
+                selected_sample_size = len(sample_set)
+                if selected_sample_size not in non_negative_set_dict:
+                    raise ValueError("The non_negative_set_dict doesn't save previous sample_size as key value!")
+                non_negative_set_ind = unprocess_first_term - non_negative_set_dict[selected_sample_size]
+                stop_search1 = timeit.default_timer()
+                #print("Search Time 1:", stop_search1 - start_search)
+                first_term = 0.5* non_negative_set_ind
+                if len(sample_set )==0:
+                    dist_ind = 0.0
+                else:
+                    dist_ind,dist_pair_array = optimized_dist(val, latest_added, sample_set, data_embeds,train_active_idx,euclid_dict, dist_pair_array)
+                #dist_ind = dist(val, sample_set,data_embeds,train_active_idx,euclid_dict)
+                objective = first_term + dist_ind*lam
+                objective_selected_dist[id][0] = objective
+                objective_selected_dist[id][1] = val
+                objective_selected_dist[id][2] =pred_cluster_val
+                objective_selected_dist[id][3] = id
+                objective_selected_dist[id][4] = unprocess_first_term
+                objective_selected_dist[id][5] = first_term
+                objective_selected_dist[id][6] = dist_ind
+
+                stop_search2 = timeit.default_timer()
+                #print("Search Time 2:", stop_search2-start_search)
+            else:
+                continue
+        ##sort the objective_selected_dist
+        print("current sample size {:}".format(len(sample_set)))
+        stop_epoch =timeit.default_timer()
+        #print("Time:", stop_epoch-start_epoch)
+        '''
+        a =np.array([[9,2,3],
+                  [4,5,5],[7,0,5]])
+        b = [5]
+        for ele in b:
+            a =a[a[:,2]!=5,:]
+        print a
+        print(a[a[:,0].argsort()[::-1]])
+        '''
+        '''
+        ##exclude the existing class
+        for pred_c in range(np.max(y_km)+1):
+            if cluster_flag_dict[pred_c]==True:
+                objective_selected_dist =objective_selected_dist[objective_selected_dist[:,2]!=pred_c,:]
+        '''
+        objective_selected_dist = objective_selected_dist[objective_selected_dist[:,0].argsort()[::-1]]
+        selected_idx = int(objective_selected_dist[0][1])
+        #print("objective is {:.7f}".format(objective_selected_dist[0][0]))
+        print("first_term is {:.7f}".format(objective_selected_dist[0][5]))
+        print("second_term is {:.7f}".format(objective_selected_dist[0][6]))
+        pred_class = int(objective_selected_dist[0][2])
+        #sample_set.add(selected_idx)
+        sample_set.append(selected_idx)
+        ##update the non_negative_set_dict
+        if len(sample_set) not in non_negative_set_dict:
+            selected_sample_size = len(sample_set)
+            non_negative_set_dict [selected_sample_size] = objective_selected_dist[0][4]
+            ##update non_negative_set_dict dictionary for this updated sample size
+            #non_negative_set_dict = update_non_negative_set_dict(selected_idx, sample_set, data_embeds, train_active_idx, euclid_dict, non_negative_set_dict)
+
+        #print("add {} to sample_set".format(selected_idx))
+        ##update the cluster_flag_dict
+        if pred_class!=-1:
+            cluster_flag_dict[pred_class] =True
+        trimmed_id = int(objective_selected_dist[0][3])
+        y_km = np.delete(y_km, trimmed_id, axis=0)
+        ##reintialize cluster_flag_dict if all values ==True
+        if all(value == True for value in cluster_flag_dict.values()) == True:
+            for key in cluster_flag_dict.keys():
+                if key not in set(y_km):
+                    cluster_flag_dict.pop(key)
+            cluster_flag_dict.update(dict(zip(cluster_flag_dict ,list(set(y_km)))))
+            cluster_flag_dict = dict.fromkeys(cluster_flag_dict, False)
+
+        #print(cluster_flag_dict.keys())
+
+        #dynamic_data_embeds= np.delete(dynamic_data_embeds, np.where(dynamic_tain_active_idx  == selected_idx), axis=0)
+        #dynamic_tain_active_idx =np.delete(dynamic_tain_active_idx,np.where(dynamic_tain_active_idx ==selected_idx))
+    #already_selected = list(sample_set)
+    already_selected = sample_set
+
+
+    ##update soft_label_matrix!!
+
+
+    print("selected node id is {}".format(already_selected))
+    train_active_mask[already_selected] = False
+    assert (train_active_mask[train_active_mask == True].shape[0] == initial_true - sample_size)
+    stop = timeit.default_timer()
+    print("Time:", stop - start)
+    return already_selected, train_active_mask
+
 
 
 

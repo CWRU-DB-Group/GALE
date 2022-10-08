@@ -270,7 +270,7 @@ def model_loss(input_real, input_z, output_dim, y, num_classes, placeholders, la
 
     # These numbers multiply the size of each layer of the generator and the discriminator,
     # respectively. You can reduce them to run your code faster for debugging purposes.
-    g_size_mult = 4
+    g_size_mult = 2
     d_size_mult = 64
     back_label_mask =label_mask
 
@@ -380,8 +380,8 @@ def discriminator(x, reuse=False, alpha=0.2, drop_rate=0.2, num_classes=2, size_
         print(x0.shape)
 
         # Input layer is ?x32x32x3
-        #x1 = tf.layers.conv2d(x0, size_mult, 3, strides=2, padding='same')
-        x1 = tf.layers.conv2d(x0, size_mult, 5, strides=2, padding='same')
+        x1 = tf.layers.conv2d(x0, size_mult, 3, strides=2, padding='same')
+        #x1 = tf.layers.conv2d(x0, size_mult, 5, strides=2, padding='same')
 
 
         relu1 = tf.maximum(alpha * x1, x1)
@@ -389,22 +389,22 @@ def discriminator(x, reuse=False, alpha=0.2, drop_rate=0.2, num_classes=2, size_
 
 
         print(relu1.shape)
-        #x2 = tf.layers.conv2d(relu1, size_mult, 3, strides=2, padding='same')
-        x2 = tf.layers.conv2d(relu1, size_mult, 5, strides=2, padding='same')
+        x2 = tf.layers.conv2d(relu1, size_mult, 3, strides=2, padding='same')
+        #x2 = tf.layers.conv2d(relu1, size_mult, 5, strides=2, padding='same')
         bn2 = tf.layers.batch_normalization(x2, training=True)  # [?x8x8x?]
         relu2 = tf.maximum(alpha * bn2, bn2)
 
         print(relu2.shape)
-        #x3 = tf.layers.conv2d(relu2, size_mult, 3, strides=2, padding='same')  # [?x4x4x?]
-        x3 = tf.layers.conv2d(relu2, size_mult, 5, strides=2, padding='same')
+        x3 = tf.layers.conv2d(relu2, size_mult, 3, strides=2, padding='same')  # [?x4x4x?]
+        #x3 = tf.layers.conv2d(relu2, size_mult, 5, strides=2, padding='same')
         bn3 = tf.layers.batch_normalization(x3, training=True)
         relu3 = tf.maximum(alpha * bn3, bn3)
         relu3 = tf.layers.dropout(relu3, rate=drop_rate)
         print(relu3.shape)
 
 
-        #x4 = tf.layers.conv2d(relu3, 2 * size_mult, 3, strides=1, padding='same')# [?x4x4x?]
-        x4 = tf.layers.conv2d(relu3, 2 * size_mult, 5, strides=1, padding='same')
+        x4 = tf.layers.conv2d(relu3, 2 * size_mult, 3, strides=1, padding='same')# [?x4x4x?]
+        #x4 = tf.layers.conv2d(relu3, 2 * size_mult, 5, strides=1, padding='same')
         bn4 = tf.layers.batch_normalization(x4, training=True)
         relu4 = tf.maximum(alpha * bn4, bn4)
         print(relu4.shape)
@@ -412,20 +412,20 @@ def discriminator(x, reuse=False, alpha=0.2, drop_rate=0.2, num_classes=2, size_
 
 
 
-        #x5 = tf.layers.conv2d(relu4, 2 * size_mult, 3, strides=1, padding='same')  # [?x4x4x?]
-        x5 = tf.layers.conv2d(relu4, 2 * size_mult, 5, strides=1, padding='same')
+        x5 = tf.layers.conv2d(relu4, 2 * size_mult, 3, strides=1, padding='same')  # [?x4x4x?]
+        #x5 = tf.layers.conv2d(relu4, 2 * size_mult, 5, strides=1, padding='same')
         bn5 = tf.layers.batch_normalization(x5, training=True)
         relu5 = tf.maximum(alpha * bn5, bn5)
         print(relu5.shape)
 
 
-        '''
+
         x6 = tf.layers.conv2d(relu5, 2 * size_mult, 3, strides=2, padding='same')  # [?x2x2x?]
         bn6 = tf.layers.batch_normalization(x6, training=True)
         relu6 = tf.maximum(alpha * bn6, bn6)
         relu6 = tf.layers.dropout(relu6, rate=drop_rate)
         print(relu6.shape)
-        '''
+
 
 
         x7 = tf.layers.conv2d(relu5, filters=(2 * size_mult), kernel_size=3, strides=1, padding='valid')

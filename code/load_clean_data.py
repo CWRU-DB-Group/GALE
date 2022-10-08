@@ -121,7 +121,7 @@ def load_clean_data(path,prefix, pca_use, normalize=True):
             train_label = G.node[node]['label']
             train_label = np.array(train_label)
             y_train_active = np.vstack((y_train_active, train_label))
-            y_train = np.vstack((y_train, [0, 0]))
+            y_train = np.vstack((y_train, train_label))
             y_val = np.vstack((y_val, [0, 0]))
             y_test = np.vstack((y_test, [0, 0]))
             idx_train_active.append(node)
