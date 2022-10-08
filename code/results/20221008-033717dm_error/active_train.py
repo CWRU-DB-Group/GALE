@@ -46,17 +46,17 @@ flags.DEFINE_integer('max_degree', 3, 'Maximum Chebyshev polynomial degree.')
 # Need to be changed by dataset
 flags.DEFINE_string('datasetname', 'dm_error', 'Dataset to be used.')
 flags.DEFINE_string('datapath', "dataset/dm/", "Dataset path")
-flags.DEFINE_integer('active_epochs',7, 'Number of active epochs to continue training discriminator.')
-flags.DEFINE_integer('sample_size', 70, 'sample size per epoch in active learning')
+flags.DEFINE_integer('active_epochs',20, 'Number of active epochs to continue training discriminator.')
+flags.DEFINE_integer('sample_size', 5, 'sample size per epoch in active learning')
 flags.DEFINE_integer('seed', 1, 'random seed')
-flags.DEFINE_string('sample_method', 'approximation', 'sampling method in active learing part')
+flags.DEFINE_string('sample_method', 'kmeans', 'sampling method in active learing part')
 flags.DEFINE_integer('query_epoch', 2, 'use to select a query strategy, default set as 5')
 flags.DEFINE_integer('query_sample_size', 10, 'use to select a query strategy, default set as 10')
 flags.DEFINE_integer('cluster_size', 150, 'clustering size')
 flags.DEFINE_float("lamda", 0.0005, "lamda in the approximation algo.")
 flags.DEFINE_boolean('pca_flag', False, 'whether to use PCA as preprocessing')
 flags.DEFINE_float('pagerank_prob', 0.85, 'probility of going down instead of going back to the starting position in the random walk')
-flags.DEFINE_float('sample_rate', 0.05, 'sample rate from V_L')
+flags.DEFINE_float('sample_rate', 0.1, 'sample rate from V_L')
 
 # Set random seed
 seed = FLAGS.seed
@@ -549,7 +549,7 @@ for epoch in range(FLAGS.active_epochs):
         # active_data_embeds = data_embeds[train_active_mask]
         # active_data_embeds = data_embeds[ground_truth_train_active_mask]
         # print(sum(ground_truth_train_active_mask))
-        #print(sum(train_active_mask))
+        print(sum(train_active_mask))
         sampler_id, train_active_mask = kmeans_sampler(FLAGS.cluster_size, FLAGS.sample_size, train_active_mask,
                                                        active_data_embeds, ground_truth_train_active)
 
