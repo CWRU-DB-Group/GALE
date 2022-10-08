@@ -1,0 +1,2100 @@
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 50 
+sample_method, entropy 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8462301587301587
+The testing precision is: 
+0.7759336099585062
+The testing recall is: 
+0.6493055555555556
+The testing f1_score is: 
+0.7069943289224951
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 50 
+sample_method, random 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8432539682539683
+The testing precision is: 
+0.7777777777777778
+The testing recall is: 
+0.6319444444444444
+The testing f1_score is: 
+0.6973180076628351
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 50 
+sample_method, kmeans 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8452380952380952
+The testing precision is: 
+0.7796610169491526
+The testing recall is: 
+0.6388888888888888
+The testing f1_score is: 
+0.7022900763358778
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 50 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 50 
+sample_method, kmeans 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8402777777777778
+The testing precision is: 
+0.7550200803212851
+The testing recall is: 
+0.6527777777777778
+The testing f1_score is: 
+0.7001862197392924
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 50 
+sample_method, kmeans 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8402777777777778
+The testing precision is: 
+0.7432950191570882
+The testing recall is: 
+0.6736111111111112
+The testing f1_score is: 
+0.7067395264116576
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 50 
+sample_method, entropy 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8442460317460317
+The testing precision is: 
+0.7651821862348178
+The testing recall is: 
+0.65625
+The testing f1_score is: 
+0.7065420560747664
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 50 
+sample_method, entropy 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8422619047619048
+The testing precision is: 
+0.7569721115537849
+The testing recall is: 
+0.6597222222222222
+The testing f1_score is: 
+0.7050092764378479
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 6 
+query_epoch, 2 
+query_sample_size, 50 
+sample_method, entropy 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8422619047619048
+The testing precision is: 
+0.7569721115537849
+The testing recall is: 
+0.6597222222222222
+The testing f1_score is: 
+0.7050092764378479
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 3 
+query_epoch, 2 
+query_sample_size, 50 
+sample_method, entropy 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8422619047619048
+The testing precision is: 
+0.7569721115537849
+The testing recall is: 
+0.6597222222222222
+The testing f1_score is: 
+0.7050092764378479
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 3 
+query_epoch, 2 
+query_sample_size, 50 
+sample_method, entropy 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8422619047619048
+The testing precision is: 
+0.7569721115537849
+The testing recall is: 
+0.6597222222222222
+The testing f1_score is: 
+0.7050092764378479
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 3 
+query_epoch, 2 
+query_sample_size, 50 
+sample_method, random 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8402777777777778
+The testing precision is: 
+0.7550200803212851
+The testing recall is: 
+0.6527777777777778
+The testing f1_score is: 
+0.7001862197392924
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 3 
+query_epoch, 2 
+query_sample_size, 50 
+sample_method, random 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 3 
+query_epoch, 2 
+query_sample_size, 50 
+sample_method, random 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8422619047619048
+The testing precision is: 
+0.749034749034749
+The testing recall is: 
+0.6736111111111112
+The testing f1_score is: 
+0.7093235831809872
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 50 
+sample_method, random 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8412698412698413
+The testing precision is: 
+0.7388059701492538
+The testing recall is: 
+0.6875
+The testing f1_score is: 
+0.7122302158273381
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 7 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 50 
+sample_method, random 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8442460317460317
+The testing precision is: 
+0.7364620938628159
+The testing recall is: 
+0.7083333333333334
+The testing f1_score is: 
+0.7221238938053098
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 8 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 50 
+sample_method, random 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8432539682539683
+The testing precision is: 
+0.7338129496402878
+The testing recall is: 
+0.7083333333333334
+The testing f1_score is: 
+0.7208480565371025
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 8 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, random 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8432539682539683
+The testing precision is: 
+0.751937984496124
+The testing recall is: 
+0.6736111111111112
+The testing f1_score is: 
+0.7106227106227105
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 7 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, kmeans 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8432539682539683
+The testing precision is: 
+0.7579365079365079
+The testing recall is: 
+0.6631944444444444
+The testing f1_score is: 
+0.7074074074074074
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 5 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, entropy 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8472222222222222
+The testing precision is: 
+0.7745901639344263
+The testing recall is: 
+0.65625
+The testing f1_score is: 
+0.7105263157894737
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 5 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8472222222222222
+The testing precision is: 
+0.7518796992481203
+The testing recall is: 
+0.6944444444444444
+The testing f1_score is: 
+0.7220216606498194
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 7 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, random 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 10 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 10 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8442460317460317
+The testing precision is: 
+0.7630522088353414
+The testing recall is: 
+0.6597222222222222
+The testing f1_score is: 
+0.7076350093109871
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 20 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 2 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 20 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 2 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 20 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 100 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 20 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 5 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, kmeans 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8482142857142857
+The testing precision is: 
+0.7755102040816326
+The testing recall is: 
+0.6597222222222222
+The testing f1_score is: 
+0.7129455909943715
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 5 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, random 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8482142857142857
+The testing precision is: 
+0.7755102040816326
+The testing recall is: 
+0.6597222222222222
+The testing f1_score is: 
+0.7129455909943715
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, random 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8482142857142857
+The testing precision is: 
+0.7755102040816326
+The testing recall is: 
+0.6597222222222222
+The testing f1_score is: 
+0.7129455909943715
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, kmeans 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8482142857142857
+The testing precision is: 
+0.7755102040816326
+The testing recall is: 
+0.6597222222222222
+The testing f1_score is: 
+0.7129455909943715
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8482142857142857
+The testing precision is: 
+0.7755102040816326
+The testing recall is: 
+0.6597222222222222
+The testing f1_score is: 
+0.7129455909943715
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 4 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, kmeans 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8482142857142857
+The testing precision is: 
+0.7755102040816326
+The testing recall is: 
+0.6597222222222222
+The testing f1_score is: 
+0.7129455909943715
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 4 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, kmeans 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8442460317460317
+The testing precision is: 
+0.758893280632411
+The testing recall is: 
+0.6666666666666666
+The testing f1_score is: 
+0.7097966728280961
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, kmeans 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8482142857142857
+The testing precision is: 
+0.7586206896551724
+The testing recall is: 
+0.6875
+The testing f1_score is: 
+0.7213114754098361
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, kmeans 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8482142857142857
+The testing precision is: 
+0.7586206896551724
+The testing recall is: 
+0.6875
+The testing f1_score is: 
+0.7213114754098361
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8472222222222222
+The testing precision is: 
+0.7723577235772358
+The testing recall is: 
+0.6597222222222222
+The testing f1_score is: 
+0.7116104868913857
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.5 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, random 
+pagerank_prob, 0.5 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8472222222222222
+The testing precision is: 
+0.7723577235772358
+The testing recall is: 
+0.6597222222222222
+The testing f1_score is: 
+0.7116104868913857
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, entropy 
+pagerank_prob, 0.5 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8452380952380952
+The testing precision is: 
+0.764
+The testing recall is: 
+0.6631944444444444
+The testing f1_score is: 
+0.7100371747211897
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.5 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.5 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.5 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.5 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 40 
+seed, 1 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.99 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+sample_rate, 0.01 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.99 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.01 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 1 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.0 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 2 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.0 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 150 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 2 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.0 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 50 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 2 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.0 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 200 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 2 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.0 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8472222222222222
+The testing precision is: 
+0.7537878787878788
+The testing recall is: 
+0.6909722222222222
+The testing f1_score is: 
+0.7210144927536233
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 200 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 2 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.0 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8472222222222222
+The testing precision is: 
+0.7537878787878788
+The testing recall is: 
+0.6909722222222222
+The testing f1_score is: 
+0.7210144927536233
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 200 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 2 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.0 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 200 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 15 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 2 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, kmeans 
+pagerank_prob, 0.0 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8482142857142857
+The testing precision is: 
+0.7755102040816326
+The testing recall is: 
+0.6597222222222222
+The testing f1_score is: 
+0.7129455909943715
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 200 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 2 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, random 
+pagerank_prob, 0.0 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8452380952380952
+The testing precision is: 
+0.764
+The testing recall is: 
+0.6631944444444444
+The testing f1_score is: 
+0.7100371747211897
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 200 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 2 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, entropy 
+pagerank_prob, 0.0 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8452380952380952
+The testing precision is: 
+0.764
+The testing recall is: 
+0.6631944444444444
+The testing f1_score is: 
+0.7100371747211897
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 200 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 2 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.0 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8482142857142857
+The testing precision is: 
+0.7586206896551724
+The testing recall is: 
+0.6875
+The testing f1_score is: 
+0.7213114754098361
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 200 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 2 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.85 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8452380952380952
+The testing precision is: 
+0.7519083969465649
+The testing recall is: 
+0.6840277777777778
+The testing f1_score is: 
+0.7163636363636363
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 200 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 2 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.001 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8472222222222222
+The testing precision is: 
+0.7596899224806202
+The testing recall is: 
+0.6805555555555556
+The testing f1_score is: 
+0.717948717948718
+
+lamda, 0.0005 
+hidden1, 16 
+cluster_size, 200 
+datapath, dataset/user10/ 
+dropout, 0.1 
+active_epochs, 10 
+datasetname, user10_error 
+max_degree, 3 
+epochs, 100 
+sample_size, 5 
+seed, 2 
+sample_rate, 0.1 
+query_epoch, 2 
+query_sample_size, 10 
+sample_method, approximation 
+pagerank_prob, 0.0 
+model, gan 
+weight_decay, 0.0005 
+learning_rate, 0.0005 
+early_stopping, 200 
+pca_flag, False 
+The testing accuracy is: 
+0.8482142857142857
+The testing precision is: 
+0.7586206896551724
+The testing recall is: 
+0.6875
+The testing f1_score is: 
+0.7213114754098361

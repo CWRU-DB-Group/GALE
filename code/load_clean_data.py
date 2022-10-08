@@ -30,7 +30,7 @@ def z_score(x, mean, std):
     return (x - mean) / std
 
 
-def load_clean_data(path,prefix, pca_use, normalize=True):
+def load_clean_data(path,prefix, sample_rate,pca_use, normalize=True):
     embedding_path = 'processed/'+prefix+'/'
 
     G_data = json.load(open(path + prefix + "-G.json"))
@@ -100,7 +100,7 @@ def load_clean_data(path,prefix, pca_use, normalize=True):
     y_test = np.array([0, 0])
     y_train_active = np.array([0,0])
     # use only 10% nodes as training
-    semi_threshold = int(round(nodes_num * 0.6 * 0.1))
+    semi_threshold = int(round(nodes_num * 0.6 * 0.1*sample_rate))
     idx_train_active =[]
     idx_train = range(semi_threshold)
     idx_val = []
@@ -116,7 +116,16 @@ def load_clean_data(path,prefix, pca_use, normalize=True):
             y_val = np.vstack((y_val, [0, 0]))
             y_test = np.vstack((y_test, [0, 0]))
             #idx_train_all.append(node)
-        elif G.node[node]['test'] == False and G.node[node]['val'] == False and node not in idx_train:
+        elif G.node[node]['test'] == False and G.node[node][
+            'val'] == False and node not in idx_train and node in range(int(round(nodes_num * 0.6 * 0.1))):
+            print("Unsampling these nodes, pretend their labels not available in the second stage,currrent n is %d" % node)
+            train_label = G.node[node]['label']
+            train_label = np.array(train_label)
+            y_train = np.vstack((y_train, [0, 0]))
+            y_train_active = np.vstack((y_train_active, [0, 0]))
+            y_val = np.vstack((y_val, [0, 0]))
+            y_test = np.vstack((y_test, [0, 0]))
+        elif G.node[node]['test'] == False and G.node[node]['val'] == False and node not in idx_train and node not in range(int(round(nodes_num * 0.6 * 0.1))):
             print("current n is %d" %node)
             train_label = G.node[node]['label']
             train_label = np.array(train_label)
