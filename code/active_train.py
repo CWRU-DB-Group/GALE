@@ -52,11 +52,11 @@ flags.DEFINE_integer('seed', 1, 'random seed')
 flags.DEFINE_string('sample_method', 'approximation', 'sampling method in active learing part')
 flags.DEFINE_integer('query_epoch', 2, 'use to select a query strategy, default set as 5')
 flags.DEFINE_integer('query_sample_size', 10, 'use to select a query strategy, default set as 10')
-flags.DEFINE_integer('cluster_size', 150, 'clustering size')
+flags.DEFINE_integer('cluster_size', 25, 'clustering size')
 flags.DEFINE_float("lamda", 0.0005, "lamda in the approximation algo.")
 flags.DEFINE_boolean('pca_flag', False, 'whether to use PCA as preprocessing')
 flags.DEFINE_float('pagerank_prob', 0.85, 'probility of going down instead of going back to the starting position in the random walk')
-flags.DEFINE_float('sample_rate', 0.05, 'sample rate from V_L')
+flags.DEFINE_float('sample_rate', 1.0, 'sample rate from V_L')
 
 # Set random seed
 seed = FLAGS.seed
@@ -498,7 +498,7 @@ sampling_method = FLAGS.sample_method
 seed = FLAGS.seed
 # sess.run(model.learning_rate)
 if 'dm' in FLAGS.datasetname:
-    update = model.learning_rate.assign(sess.run(model.learning_rate) * pow((0.9), 5))
+    update = model.learning_rate.assign(sess.run(model.learning_rate) * pow((1.0), 5))
     sess.run(update)
 
 elif 'ml' in FLAGS.datasetname:
