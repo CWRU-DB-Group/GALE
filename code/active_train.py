@@ -44,19 +44,19 @@ flags.DEFINE_float('weight_decay', 5e-4, 'Weight for L2 loss on embedding matrix
 flags.DEFINE_integer('early_stopping', 200, 'Tolerance for early stopping (# of epochs).')
 flags.DEFINE_integer('max_degree', 3, 'Maximum Chebyshev polynomial degree.')
 # Need to be changed by dataset
-flags.DEFINE_string('datasetname', 'dm_error', 'Dataset to be used.')
-flags.DEFINE_string('datapath', "dataset/dm/", "Dataset path")
-flags.DEFINE_integer('active_epochs',7, 'Number of active epochs to continue training discriminator.')
-flags.DEFINE_integer('sample_size', 70, 'sample size per epoch in active learning')
-flags.DEFINE_integer('seed', 1, 'random seed')
-flags.DEFINE_string('sample_method', 'approximation', 'sampling method in active learing part')
+flags.DEFINE_string('datasetname', 'ml_error', 'Dataset to be used.')
+flags.DEFINE_string('datapath', "dataset/ml/", "Dataset path")
+flags.DEFINE_integer('active_epochs',10, 'Number of active epochs to continue training discriminator.')
+flags.DEFINE_integer('sample_size', 5, 'sample size per epoch in active learning')
+flags.DEFINE_integer('seed', 2, 'random seed')
+flags.DEFINE_string('sample_method', 'entropy', 'sampling method in active learing part')
 flags.DEFINE_integer('query_epoch', 2, 'use to select a query strategy, default set as 5')
 flags.DEFINE_integer('query_sample_size', 10, 'use to select a query strategy, default set as 10')
-flags.DEFINE_integer('cluster_size', 25, 'clustering size')
+flags.DEFINE_integer('cluster_size', 200, 'clustering size')
 flags.DEFINE_float("lamda", 0.0005, "lamda in the approximation algo.")
 flags.DEFINE_boolean('pca_flag', False, 'whether to use PCA as preprocessing')
-flags.DEFINE_float('pagerank_prob', 0.85, 'probility of going down instead of going back to the starting position in the random walk')
-flags.DEFINE_float('sample_rate', 1.0, 'sample rate from V_L')
+flags.DEFINE_float('pagerank_prob', 0.0001, 'probility of going down instead of going back to the starting position in the random walk')
+flags.DEFINE_float('sample_rate', 0.1, 'sample rate from V_L')
 
 # Set random seed
 seed = FLAGS.seed
